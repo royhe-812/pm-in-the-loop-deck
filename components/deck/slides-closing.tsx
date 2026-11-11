@@ -13,7 +13,7 @@ export function MondaySlide() {
     <SlideBody>
       <h2 className="rise text-[78px] leading-[0.98] font-bold tracking-[-0.03em]">What to do Monday</h2>
 
-      <ul className="mt-auto flex flex-col">
+      <ul className="mt-auto flex flex-col pt-6">
         {mondayActions.map((action, i) => (
           <li
             key={action.lead}
@@ -24,7 +24,7 @@ export function MondaySlide() {
               type="button"
               aria-pressed={done[i]}
               onClick={() => setDone((d) => d.map((v, j) => (j === i ? !v : v)))}
-              className="flex w-full items-center gap-8 py-[22px] text-left"
+              className="flex w-full items-center gap-8 py-4 text-left"
             >
               <span
                 className={cn(
@@ -34,9 +34,11 @@ export function MondaySlide() {
               >
                 {done[i] && <Check className="size-8" strokeWidth={3.5} />}
               </span>
-              <span className="text-[44px] leading-[1.05] font-bold tracking-tight">
-                {action.lead}{' '}
-                <span className="text-muted-foreground font-medium">{action.rest}</span>
+              <span className="flex flex-col gap-1">
+                <span className="text-[42px] leading-[1.05] font-bold tracking-tight">{action.lead}</span>
+                <span className="text-muted-foreground text-[26px] leading-tight font-medium">
+                  {action.rest}
+                </span>
               </span>
             </button>
           </li>

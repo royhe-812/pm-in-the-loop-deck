@@ -7,8 +7,8 @@ export function StorySlide({ story, loopName }: { story: Story; loopName: string
   return (
     <SlideBody>
       <div className="rise flex items-start justify-between gap-8" style={step(0)}>
-        <h2 className="max-w-[760px] text-[60px] leading-[1.02] font-bold tracking-tight text-balance">
-          {story.title || 'One story. Pick it, then tell it.'}
+        <h2 className="text-[60px] leading-[1.02] font-bold tracking-tight">
+          {story.title || 'Pick one story.'}
         </h2>
         {isPlaceholder && (
           <span className="bg-mark text-mark-foreground mt-3 shrink-0 rounded-md px-4 py-2">
@@ -17,11 +17,11 @@ export function StorySlide({ story, loopName }: { story: Story; loopName: string
         )}
       </div>
 
-      <ol className="mt-10 flex flex-1 flex-col justify-center gap-5">
+      <ol className="mt-4 flex min-h-0 flex-1 flex-col justify-center gap-2">
         {story.fields.map((field, i) => (
           <li
             key={field.label}
-            className="rise grid grid-cols-[330px_1fr] items-end gap-8"
+            className="rise grid min-h-[56px] grid-cols-[420px_1fr] items-end gap-8"
             style={step(i + 1)}
           >
             <Mono className="text-muted-foreground pb-2">{field.label}</Mono>
@@ -39,7 +39,7 @@ export function StorySlide({ story, loopName }: { story: Story; loopName: string
       <div className="rise mt-6 flex items-end justify-between gap-10" style={step(5)}>
         <div>
           <Mono className="text-muted-foreground">Say out loud</Mono>
-          <p className="mt-2 max-w-[820px] text-[34px] leading-[1.12] font-semibold text-balance">
+          <p className="mt-1 max-w-[820px] text-[32px] leading-[1.12] font-semibold text-balance">
             {story.takeaway}
           </p>
         </div>

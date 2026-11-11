@@ -28,7 +28,7 @@ export function WhoSlide() {
   ]
   return (
     <SlideBody>
-      <div className="grid flex-1 grid-cols-[480px_1fr] gap-20">
+      <div className="grid min-h-0 flex-1 grid-cols-[440px_1fr] gap-16">
         <div className="flex flex-col justify-between">
           <h2 className="rise text-[120px] leading-[0.92] font-bold tracking-[-0.035em]">
             Roy
@@ -40,17 +40,17 @@ export function WhoSlide() {
             <span className="text-primary text-[26px] font-semibold">linkedin.com/in/rzyh</span>
           </div>
         </div>
-        <dl className="flex flex-col justify-center">
+        <dl className="flex flex-col justify-start pt-1">
           {facts.map(([label, value], i) => (
             <div
               key={label}
-              className="rise border-border grid grid-cols-[190px_1fr] items-baseline gap-6 border-t py-7 first:border-t-2 first:border-foreground"
+              className="rise border-border grid grid-cols-[160px_1fr] items-baseline gap-6 border-t py-5 first:border-t-2 first:border-foreground"
               style={step(i + 1)}
             >
               <dt>
                 <Mono className="text-muted-foreground">{label}</Mono>
               </dt>
-              <dd className="text-[38px] leading-[1.1] font-semibold text-balance">{value}</dd>
+              <dd className="text-[32px] leading-[1.1] font-semibold text-balance">{value}</dd>
             </div>
           ))}
         </dl>

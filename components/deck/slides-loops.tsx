@@ -187,11 +187,11 @@ export function CostSlide() {
         </div>
 
         <div
-          className="rise bg-card border-border flex flex-col justify-center rounded-xl border p-10"
+          className="rise bg-card border-border flex flex-col justify-center rounded-xl border p-9"
           style={step(3)}
         >
           <Mono className="text-muted-foreground">Xero — data extraction</Mono>
-          <div className="mt-8 flex flex-col gap-7">
+          <div className="mt-6 flex flex-col gap-5">
             <div>
               <div className="flex items-baseline justify-between text-[24px] font-semibold">
                 <span>Claude 3.5</span>
@@ -202,7 +202,7 @@ export function CostSlide() {
             <div>
               <div className="flex items-baseline justify-between text-[24px] font-semibold">
                 <span>OCR + Gemini 2.5 Flash</span>
-                <span className="text-primary font-mono text-[22px]">⅓</span>
+                <span className="text-primary font-mono text-[22px]">1/3</span>
               </div>
               <div className="bg-primary grow mt-2 h-[44px] w-1/3 rounded-sm" style={step(4)} />
             </div>
@@ -210,9 +210,11 @@ export function CostSlide() {
           <p className="mt-6 font-mono text-[14px] tracking-wide text-muted-foreground uppercase">
             Relative cost · same job
           </p>
-          <div className="border-foreground mt-8 border-t-2 pt-6">
-            <span className="text-primary text-[96px] leading-none font-bold tracking-tight">3x cheaper</span>
-            <p className="mt-3 text-[26px] font-medium">Same job done, for a third of the cost.</p>
+          <div className="border-foreground mt-6 border-t-2 pt-5">
+            <span className="text-primary block text-[72px] leading-none font-bold tracking-tight whitespace-nowrap">
+              3x cheaper
+            </span>
+            <p className="mt-3 text-[24px] leading-tight font-medium">Same job done, for a third of the cost.</p>
           </div>
         </div>
       </div>
